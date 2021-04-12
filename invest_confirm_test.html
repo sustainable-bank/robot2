@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type="text/css" href="style.css">
+    <title>永續智能投資</title>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="#">基金/永續智能投資</a>
+        <a href="#">信用卡</a>
+        <a href="#">外幣/換匯</a>
+        <a href="#">臺幣/轉帳</a>
+        <div onclick="location.href='index.html'" style="cursor: pointer;"><h3>永續銀行</h3></div>
+    </div>
+
+    <div class="wrapper">
+        <div>
+            <h2 style="margin-left: 2.7em;">永續智能投資</h2>
+        </div>
+        <div></div>
+        <div></div>
+        <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-4.png" width="200%" style="margin-right: 10em;">
+    </div>
+
+    <div>
+        <h1 style="text-align: left; color: #38566A; margin-bottom: 15px;">確認投資內容</h1>
+    </div>
+
+
+    <!-- <input type="button" class="btnCall" value="點擊呼叫名字" onclick="callName()"> -->
+    <input type="text" id="inputName">
+    <input type="text" id="inputMoney">
+    <input type="text" id="inputTime">
+    <input type="text" id="inputiMoney">
+
+    <input type="button" id="btn" value="點擊" onclick="setInputItem()">
+
+
+
+    <script>
+        document.getElementById("inputName").value = localStorage.getItem("Name");
+        document.getElementById("inputMoney").value = localStorage.getItem("Money");
+        document.getElementById("inputTime").value = localStorage.getItem("Time");
+        document.getElementById("inputiMoney").value = localStorage.getItem("iMoney");
+        var call = document.querySelector('.btnCall');
+        var str = localStorage.getItem('Name');
+        var str2 = localStorage.getItem('Money');
+        var str3 = localStorage.getItem('Time');
+        var str4 = localStorage.getItem('iMoney');
+
+        var btn = document.querySelector('#btn');
+
+        function setInputItem(e) {
+            var str = document.querySelector("#inputName").value; //選擇到表單輸入的值
+            localStorage.setItem("Name", str); //存入 localStorage
+        }
+        console.log(str);
+
+
+        // function callName(e) {
+        //     //取出已存在瀏覽器的資料
+        //     alert('你的名字叫做' + str);
+        // }
+
+        //call.addEventListener('click',callName)
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="#">基金/地球智能投資</a>
+        <a href="#">信用卡</a>
+        <a href="#">外幣/換匯</a>
+        <a href="#">臺幣/轉帳</a>
+        <h3 href="index.html" style="text-align: left; ">地球銀行</h3>
+    </div>
+
+    <div class="wrapper">
+        <div>
+            <h2 style="margin-left: 2em;">地球智能投資</h2>
+        </div>
+        <div></div>
+        <div></div>
+        <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-2.png" width="200%" style="margin-right: 10em;">
+    </div>
+
+    <input type="text" id="inputName">
+    <input type="text" id="inputMoney">
+    <input type="text" id="inputTime">
+    <input type="text" id="inputiMoney">
+    <input type="text" id="inputPercent">
+    <span id="inputName"></span>
+
+
+    <span class="showName"></span>
+
+    <script>
+
+        function showName() {
+            let nameDom = document.querySelector('.showName')
+            nameDom.innerHTML = localStorage.getItem('Name')
+        }
+
+        showName();
+
+
+    </script>
+
+    <script>
+
+        document.getElementById("inputName").value = localStorage.getItem("Name");
+        document.getElementById("inputMoney").value = localStorage.getItem("Money");
+        document.getElementById("inputTime").value = localStorage.getItem("Time");
+        document.getElementById("inputiMoney").value = localStorage.getItem("iMoney");
+        document.getElementById("inputPercent").value = localStorage.getItem("Percent");
+
+        var str = localStorage.getItem('Name');
+        var str2 = localStorage.getItem('Money');
+        var str3 = localStorage.getItem('Time');
+        var str4 = localStorage.getItem('iMoney');
+        var str5 = localStorage.getItem('Percent');
+
+        console.log(str5);
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
