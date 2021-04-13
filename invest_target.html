@@ -31,17 +31,15 @@
         <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-2.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
     </div>
 
-    <div>
+    <h1 style="text-align: center; color: #38566A; margin-bottom: 15px;">設定投資目標</h1>
 
-        <h1 style="text-align: center; color: #38566A; margin-bottom: 15px;">設定投資目標</h1>
-
-
+    <form>
         <div style="margin-left:6em; margin-right:6em;margin-top:1.8em;background-color: white;border:3px #CCCCCC solid;
     border-radius: 0.5em;color: black;font-size: 20px;height: 8em; ">
             <img src="地球智能投資圖片/4_設定投資目標/4_1.png"
                 style="float: left; width: 20%;margin-left: 3em; margin-top: 1em; margin-right: 2em;">
             <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請針對投資目標，設定目標名稱；請輸入於下方空格內</p>
-            <input type="text" id="targetName" class="inputbox" placeholder="  請輸入目標名稱">
+            <input type="text" id="targetName" class="inputbox" placeholder="  請輸入目標名稱" required="required">
         </div>
 
         <div style="margin-left: 6em; margin-right: 6em; margin-top:1em;background-color: white;border:3px #CCCCCC solid;
@@ -50,29 +48,37 @@
                 style="float: left; width: 20%;margin-left: 3em; margin-top: 2em; margin-right: 2em;">
             <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您需要多少錢才能達成您的目標呢？請輸入於下方空格內</p>
             <input type="text" id="targetMoney" class="inputbox" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
-                placeholder="  請輸入新台幣1,000～9,999,999元"> 元
+                placeholder="  請輸入新台幣1,000～9,999,999元" required="required"> 元
             <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您預計花多久時間進行此項投資呢？請輸入於下方空格內</p>
             <input type="text" id="targetTime" class="inputbox" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
-                placeholder="  請輸入3~50年"> 年
-            <p style="color: gray; font-size: 10px;">小提醒<br>在智能投資裡，有65%享受自由人生的族群，目標時程設定在3至5年。</p>
+                placeholder="  請輸入3~50年" required="required"> 年<br><br>
+            <img src="地球智能投資圖片/alert_1.png" width="25%">
         </div>
 
         <div style="margin-left: 6em; margin-right: 6em; margin-top: 1em; background-color: white; border: 3px #CCCCCC solid;
-    border-radius: 0.5em;color: black;font-size: 20px;height: 16em; ">
+    border-radius: 0.5em;color: black;font-size: 20px;height: 18em; ">
             <img src="地球智能投資圖片/4_設定投資目標/4_3.png" style="float: left; width: 20%; margin: 1.5em; margin-right: 4em;">
             <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您現在要投入多少資金在此項投資呢？請輸入於下方空格內</p>
             <input type="text" id="investMoney" class="inputbox" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
-                placeholder="  請輸入新台幣1,000～9,999,999元"> 元
-            <p style="color: gray; font-size: 10px;">小提醒<br>投資一定金額能讓資產配置更有效率。在智能投資裡，有46%享受自由人生的族群，每月投入在新台幣五千至一萬元間</p>
+                placeholder="  請輸入新台幣1,000～9,999,999元" required="required"> 元<br><br>
+            <img src="地球智能投資圖片/alert_2.png" width="40%">
             <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您較想使用單筆投資還是定期定額的方式進行投資呢？請點選下方選項</p>
             <input value='a' type="radio" name="erarbeiten">單筆投資<br>
-            <input value='b' type="radio" name="erarbeiten">定期定額
-            <p style="color: gray; font-size: 10px;">
-                小提醒<br>單筆投資：一筆錢一次進行投資，相對低點進場會有較大獲利空間，但收益及風險相對較大<br>定期定額：每個月定時投入固定的金額，只要長期趨勢向上就有機會獲利，較不受市場波動影響，風險較低</p>
+            <input value='b' type="radio" name="erarbeiten">定期定額<br><br>
+            <img src="地球智能投資圖片/alert_3.png" width="37%">
 
         </div>
 
-    </div>
+    </form>
+
+    <!-- <input type="submit" class="btnClass btn_type1" value="下一步" style="margin-left: 45em;" onclick="saveData()"> -->
+
+    <!-- <input type="button" class="btnClass btn_type1" value="下一步" style="margin-left: 45em;"
+            onclick="location.href='invest_solution.html'"> -->
+
+        <div onclick="location.href='invest_solution.html'">
+            <input type="submit" class="btnClass btn_type1" value="下一步" style="margin-left: 45em;" onclick="saveData()">
+        </div> 
 
 
 
@@ -125,10 +131,6 @@
 
 
     </script>
-
-    <div onclick="location.href='invest_solution.html'">
-        <input type="button" class="btnClass btn_type1" value="下一步" style="margin-left: 45em;" onclick="saveData()">
-    </div>
 
 </body>
 
