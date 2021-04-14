@@ -142,7 +142,7 @@
             </div>
             <div class="item_5">
                 <form style="font-size: 13pt;">
-                    <img src="地球智能投資圖片/10_3_投資下單.png" width="70%"
+                    <img src="地球智能投資圖片/10_1_投資下單.png" width="70%"
                         style="padding-left:-20px ; padding-top: 20px; margin-left: 1em;">
                 </form>
             </div>
@@ -208,28 +208,54 @@
     </div>
 
     <br><br>
-
-    <div style="text-align:center;">
+    <!-- 
+    <div style="text-align:center;"></div>
         <button id="demo2" class="btn_type1">確認投資</button>
     </div>
     <div style="text-align: center;">
         <button class="btn_type2" onclick="location.href='invest_confirm.html'">修改</button>
-    </div>
+    </div> -->
+
+    <input type="button" class="btn_type1" id="demo2" value="確認投資" style="text-align: center; margin-left: 40em;" onclick='confirmTest()'>
+
+    <button class="btn_type2" onclick="location.href='invest_confirm.html'">修改</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- 若需相容 IE11，要加載 Promise Polyfill-->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         document.getElementById("demo2").addEventListener("click", function () {
             swal({
                 title: "申購前提醒",
                 text: "是否繼續申購?",
-                type: "success"
+                type: "success",
             }).then(function () {
-                window.location = "invest_confirm_finish3.html";
+                window.location = "invest_confirm_finish.html";
             });
         });
+    </script> -->
+
+    <script type="text/javascript">
+        function confirmTest() {
+            Swal.fire({
+                title: "申購前提醒",
+                text: "是否繼續申購?",
+                showCancelButton: true
+            }).then(function (result) {
+                if (result.value) {
+                    window.location = "invest_confirm_finish3.html";
+                }
+                else {
+                    window.location = "invest_confirm3.html";
+                }
+            });
+        }
     </script>
+
 
     <br><br>
 
