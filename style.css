@@ -70,7 +70,7 @@ h1{
 
 .wrapper {
     display: grid;
-    grid-template-columns: 288px 200px 288px 268px;
+    grid-template-columns: 288px 200px 375px 325px;
     margin-top: 3em;
     font-size: 13px;
   }
@@ -276,8 +276,8 @@ blockquote{
   background-color: white;
   border:5px #CCCCCC solid;
   display:block; 
-  margin-left: 7.3em; 
-  margin-right: 6.5em; 
+  margin-left: 7em; 
+  margin-right: 6em; 
   margin-top: -2em; 
   border-radius: 0.5em;
   padding: 3em;
