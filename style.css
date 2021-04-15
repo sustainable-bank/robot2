@@ -84,7 +84,7 @@ h1{
 
   .wrapper3 {
     display: grid;
-    grid-template-columns: 288px 270px 288px 268px;
+    grid-template-columns: 288px 270px 425px 365px;
     text-align: left;
     margin-top: 1em;
     margin-left: 9em;

@@ -16,34 +16,162 @@
         <a href="#">信用卡</a>
         <a href="#">外幣/換匯</a>
         <a href="#">臺幣/轉帳</a>
-        <div onclick="location.href='index.html'" style="cursor: pointer;"><h3>永續銀行</h3></div>
+        <div onclick="location.href='index.html'" style="cursor: pointer;">
+            <h3>永續銀行</h3>
+        </div>
     </div>
 
     <div class="wrapper">
         <div>
-            <h2 style="margin-left: 2.7em;">永續智能投資</h2>
+            <h2 style="margin-left: 6em;margin-top: -1em;">永續智能投資</h2>
         </div>
         <div></div>
         <div></div>
-        <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-4.png" width="200%" style="margin-right: 10em;">
+        <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-4.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
     </div>
 
-    <div>
-        <h1 style="text-align: left; color: #38566A; margin-bottom: 15px;">確認投資內容</h1>
+    <div class="wrapper3">
+        <h1 style="text-align: left; color: #38566A; font-size: 18pt;">確認投資內容</h1>
     </div>
 
+    <form>
+        <div class="confirm_frame">
+            <p style="font-size: 13pt; color: #465765; margin-top: -1.5em; font-weight:bold;">確認本次目標為以下內容</p>
+            <div class="flex_3">
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>名稱</p>
+                            <input type="text" id="inputName" class="inputbox2">
+                        </blockquote>
+                    </form>
+                </div>
 
-    <!-- <input type="button" class="btnCall" value="點擊呼叫名字" onclick="callName()"> -->
-    <input type="text" id="inputName">
-    <input type="text" id="inputMoney">
-    <input type="text" id="inputTime">
-    <input type="text" id="inputiMoney">
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>目標金額</p>
+                            <input type="text" id="inputMoney" class="inputbox2">元
+                        </blockquote>
+                    </form>
+                </div>
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>預計投資年限</p>
+                            <input type="text" id="inputTime" class="inputbox2">年
+                        </blockquote>
+                    </form>
+                </div>
+            </div>
 
-    <input type="button" id="btn" value="點擊" onclick="setInputItem()">
+            <hr>
+
+            <p style="font-size: 13pt; color: #465765; margin-top: 1em; font-weight:bold;">請輸入本次申購資訊於以下內容</p>
+            <div class="flex_3">
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>投資方式</p>
+                            <input value='單筆投資' type="radio" name="erarbeiten">單筆投資<br>
+                            <input value='定期定額' type="radio" name="erarbeiten">定期定額
+                        </blockquote>
+                    </form>
+                </div>
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>投資金額</p>
+                            <input type="text" id="inputiMoney" class="inputbox2">元
+                        </blockquote>
+                    </form>
+                </div>
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>停利停損通知點</p>
+                            停利停損：±<input type="text" id="inputPercent" class="inputbox"
+                                onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="10"> ％
+                        </blockquote>
+                    </form>
+                </div>
+            </div>
+
+            <div class="flex_3">
+                <div class="item_4">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>個人風險屬性</p>
+                            <p>積極性</p>
+                        </blockquote>
+                    </form>
+                </div>
+                <div class="item_4">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p>扣款帳號</p>
+                            <select>
+                                <option>000012345678【營業部永續活期儲蓄存款】－新台幣</option>
+                            </select>
+                        </blockquote>
+                    </form>
+                </div>
+                <div class="item_3">
+                </div>
+            </div>
 
 
+            <hr>
+
+            <p style="font-size: 13pt; color: #465765; margin-top: 1em; font-weight:bold;">請查看本次投資組合</p>
+
+            <div class="flex_3">
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p style="font-weight:bold;">投資方案</p>
+                            <p>永續1號</p>
+                        </blockquote>
+                    </form>
+                </div>
+            </div>
+
+            <div class="flex_3">
+                <div class="item_3">
+                    <form style="font-size: 13pt;">
+                        <blockquote>
+                            <p style="font-weight:bold;">標的配置比重</p>
+                        </blockquote>
+                    </form>
+                </div>
+                <div class="item_5">
+                    <form style="font-size: 13pt;">
+                        <img src="地球智能投資圖片/10_1_投資下單.png" width="70%"
+                            style="padding-left:-20px ; padding-top: 20px; margin-left: 1em;">
+                    </form>
+                </div>
+                <div class="flex_3">
+                    <div class="item_3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div style="text-align:center;" onclick="location.href='invest_confirm_check.html'">
+            <input type="button" class="btn_type1" id="btn" value="下一步" onclick="setInputItem()">
+        </div>
+        <div style="text-align: center;">
+            <button class="btn_type2" onclick="location.href='invest_e1_1.html'">上一步</button>
+        </div>
+
+    </form>
+
+    <br><br>
 
     <script>
+
         document.getElementById("inputName").value = localStorage.getItem("Name");
         document.getElementById("inputMoney").value = localStorage.getItem("Money");
         document.getElementById("inputTime").value = localStorage.getItem("Time");
@@ -58,20 +186,49 @@
 
         function setInputItem(e) {
             var str = document.querySelector("#inputName").value; //選擇到表單輸入的值
+            var str2 = document.querySelector("#inputMoney").value;
+            var str3 = document.querySelector("#inputTime").value;
+            var str4 = document.querySelector("#inputiMoney").value;
+            var str5 = document.querySelector("#inputPercent").value;
+
             localStorage.setItem("Name", str); //存入 localStorage
+            localStorage.setItem("Money", str2);
+            localStorage.setItem("Time", str3);
+            localStorage.setItem("iMoney", str4);
+            localStorage.setItem("Percent", str5);
         }
-        console.log(str);
-
-
-        // function callName(e) {
-        //     //取出已存在瀏覽器的資料
-        //     alert('你的名字叫做' + str);
-        // }
-
-        //call.addEventListener('click',callName)
     </script>
 
+    <script>
+        //call reload on page load
+        reload();
 
+        //add click functionality to radio buttons
+        Array.from(document.querySelectorAll('input[type="radio"]')).forEach(function (item, index) {
+            item.addEventListener('click', save);
+        });
+
+        //Save Values
+        function save() {
+            //Radiobuttons  
+            var g1 = document.querySelector('input[name=erarbeiten]:checked').value;
+            localStorage.setItem("g1", g1);
+        }
+        //Restoring saved Values
+        function reload() {
+            // Radiobuttons    
+            // get a list of DOM elements
+            var G1 = Array.from(document.getElementsByName('erarbeiten'));
+            var val1 = localStorage.getItem('g1');
+            for (var i = 0; i < G1.length; i++) {
+                if (G1[i].value == val1) {
+                    G1[i].checked = true;
+                }
+            }
+        }
+
+
+    </script>
 
 
 </body>

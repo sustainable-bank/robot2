@@ -72,8 +72,7 @@
                 <form style="font-size: 13pt;">
                     <blockquote>
                         <p>投資方式</p>
-                        <input value='a' type="radio" name="erarbeiten">單筆投資<br>
-                        <input value='b' type="radio" name="erarbeiten">定期定額
+                        <span class="showChoose"></span>
                     </blockquote>
                 </form>
             </div>
@@ -184,6 +183,12 @@
             }
             showPercent();
 
+            function showChoose() {
+                let nameDom = document.querySelector('.showChoose')
+                nameDom.innerHTML = localStorage.getItem('g1')
+            }
+            showChoose();
+
 
         </script>
 
@@ -205,6 +210,37 @@
 
         </script>
 
+        <script>
+            //call reload on page load
+            reload();
+
+            //add click functionality to radio buttons
+            Array.from(document.querySelectorAll('input[type="radio"]')).forEach(function (item, index) {
+                item.addEventListener('click', save);
+            });
+
+            //Save Values
+            function save() {
+                //Radiobuttons  
+                var g1 = document.querySelector('input[name=erarbeiten]:checked').value;
+                localStorage.setItem("g1", g1);
+            }
+            //Restoring saved Values
+            function reload() {
+                // Radiobuttons    
+                // get a list of DOM elements
+                var G1 = Array.from(document.getElementsByName('erarbeiten'));
+                var val1 = localStorage.getItem('g1');
+                for (var i = 0; i < G1.length; i++) {
+                    if (G1[i].value == val1) {
+                        G1[i].checked = true;
+                    }
+                }
+            }
+
+
+        </script>
+
     </div>
 
     <br><br>
@@ -216,7 +252,8 @@
         <button class="btn_type2" onclick="location.href='invest_confirm.html'">修改</button>
     </div> -->
 
-    <input type="button" class="btn_type1" id="demo2" value="確認投資" style="text-align: center; margin-left: 40em;" onclick='confirmTest()'>
+    <input type="button" class="btn_type1" id="demo2" value="確認投資" style="text-align: center; margin-left: 40em;"
+        onclick='confirm()'>
 
     <button class="btn_type2" onclick="location.href='invest_confirm.html'">修改</button>
 
@@ -240,7 +277,7 @@
     </script> -->
 
     <script type="text/javascript">
-        function confirmTest() {
+        function confirm() {
             Swal.fire({
                 title: "申購前提醒",
                 text: "是否繼續申購?",
@@ -261,7 +298,4 @@
 
 
 </body>
-
-
-
 </html>
