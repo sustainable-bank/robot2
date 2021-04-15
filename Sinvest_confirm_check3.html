@@ -27,7 +27,7 @@
         </div>
         <div></div>
         <div></div>
-        <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-5.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
+        <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-4.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
     </div>
 
     <div class="wrapper3">
@@ -35,10 +35,6 @@
     </div>
 
     <div class="confirm_frame">
-        <div style="text-align: center;">
-            <img src="地球智能投資圖片/13_投資完成.png" width="15%">
-        </div>
-        <br><br>
         <p style="font-size: 13pt; color: #465765; margin-top: -1.5em; font-weight:bold;">確認本次目標為以下內容</p>
         <div class="flex_3">
             <div class="item_3">
@@ -103,7 +99,7 @@
                 <form style="font-size: 13pt;">
                     <blockquote>
                         <p>個人風險屬性</p>
-                        <p>積極型</p>
+                        <p>穩健型</p>
                     </blockquote>
                 </form>
             </div>
@@ -129,7 +125,7 @@
                 <form style="font-size: 13pt;">
                     <blockquote>
                         <p style="font-weight:bold;">投資方案</p>
-                        <p>永續1號</p>
+                        <p>永續3號</p>
                     </blockquote>
                 </form>
             </div>
@@ -194,7 +190,6 @@
             showChoose();
 
 
-
         </script>
 
         <script>
@@ -249,17 +244,58 @@
     </div>
 
     <br><br>
-
-    <div style="text-align:center;" onclick="location.href='final.html'">
-        <button id="demo2" class="btn_type1">完成</button>
+    <!-- 
+    <div style="text-align:center;"></div>
+        <button id="demo2" class="btn_type1">確認投資</button>
     </div>
+    <div style="text-align: center;">
+        <button class="btn_type2" onclick="location.href='invest_confirm.html'">修改</button>
+    </div> -->
+
+    <input type="button" class="btn_type1" id="demo2" value="確認投資" style="text-align: center; margin-left: 40em;"
+        onclick='confirm()'>
+
+    <button class="btn_type2" onclick="location.href='Sinvest_confirm3.html'">修改</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- 若需相容 IE11，要加載 Promise Polyfill-->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <!-- <script type="text/javascript">
+        document.getElementById("demo2").addEventListener("click", function () {
+            swal({
+                title: "申購前提醒",
+                text: "是否繼續申購?",
+                type: "success",
+            }).then(function () {
+                window.location = "invest_confirm_finish.html";
+            });
+        });
+    </script> -->
+
+    <script type="text/javascript">
+        function confirm() {
+            Swal.fire({
+                title: "申購前提醒",
+                text: "是否繼續申購?",
+                showCancelButton: true
+            }).then(function (result) {
+                if (result.value) {
+                    window.location = "Sinvest_confirm_finish3.html";
+                }
+                else {
+                    window.location = "Sinvest_confirm3.html";
+                }
+            });
+        }
+    </script>
 
 
     <br><br>
 
 
 </body>
-
-
-
 </html>
