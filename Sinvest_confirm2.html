@@ -30,51 +30,46 @@
         <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-4.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
     </div>
 
-    <img src="地球智能投資圖片/robot_judy.png" style="float: left; z-index: -100; margin-top: 2em;" width="5%">
-
-    <div class="wrapper3">
-        <h1 style="text-align: left; color: #38566A; font-size: 18pt;">確認投資內容</h1>
-    </div>
+    <h1 style="text-align: center; color: #38566A; margin-bottom: 15px; font-size: 32px;">確認投資內容</h1>
 
     <form action="Sinvest_confirm_check2.html">
-        <div class="confirm_frame">
-            <p style="font-size: 13pt; color: #465765; margin-top: -1.5em; font-weight:bold;">確認本次目標為以下內容</p>
+        <img src="地球智能投資圖片/Rachel.png" width="5%" class="headshot" style="margin-top: 2em;">
+        <div class="mwt_border" style="width:60em; height: 11em;">
+            <span class="arrow_l_int"></span>
+            <span class="arrow_l_out"></span>
+            <p style="font-size: 13pt; color: #465765; font-weight:bold;">請輸入本次目標計畫於以下內容</p>
             <div class="flex_3">
                 <div class="item_3">
-                    <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>名稱</p>
-                        <input type="text" id="inputName" class="inputbox2" required>
+                    <blockquote class="blockquote1">
+                        <p style="font-weight: bold;">名稱</p>
+                        <input type="text" id="targetName" class="inputbox2" required>
                     </blockquote>
-                    <!-- </form> -->
                 </div>
 
                 <div class="item_3">
-                    <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>目標金額</p>
-                        <input type="text" id="inputMoney" class="inputbox2" required>元
+                    <blockquote class="blockquote1">
+                        <p style="font-weight: bold;">目標金額</p>
+                        <input type="text" id="targetMoney" class="inputbox2" required>元
                     </blockquote>
-                    <!-- </form> -->
                 </div>
                 <div class="item_3">
-                    <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>預計投資年限</p>
-                        <input type="text" id="inputTime" class="inputbox2" required>年
+                    <blockquote class="blockquote1">
+                        <p style="font-weight: bold;">預計投資年限</p>
+                        <input type="text" id="targetTime" class="inputbox2" required>年
                     </blockquote>
-                    <!-- </form> -->
                 </div>
             </div>
+        </div>
 
-            <hr>
-
+        <div class="mwt_border" style="width:60em; height: 20em; margin-top: 1em;">
+            <span class="arrow_l_int"></span>
+            <span class="arrow_l_out"></span>
             <p style="font-size: 13pt; color: #465765; margin-top: 1em; font-weight:bold;">請輸入本次申購資訊於以下內容</p>
             <div class="flex_3">
                 <div class="item_3">
                     <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>投資方式</p>
+                    <blockquote class="blockquote2">
+                        <p style="font-weight: bold;">投資方式</p>
                         <input value='單筆投資' type="radio" name="erarbeiten">單筆投資<br>
                         <input value='定期定額' type="radio" name="erarbeiten">定期定額
                     </blockquote>
@@ -82,96 +77,78 @@
                 </div>
                 <div class="item_3">
                     <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>投資金額</p>
-                        <input type="text" id="inputiMoney" class="inputbox2" required>元
+                    <blockquote class="blockquote2">
+                        <p style="font-weight: bold;">投資金額</p>
+                        <input type="text" id="targetiMoney" class="inputbox2" required>元
                     </blockquote>
                     <!-- </form> -->
                 </div>
                 <div class="item_3">
                     <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>停利停損通知點</p>
-                        停利停損：±<input type="text" id="inputPercent" class="inputbox"
+                    <blockquote class="blockquote2">
+                        <p style="font-weight: bold;">停利停損通知點</p>
+                        停利停損：±<input type="text" id="targetPercent" class="inputbox"
                             onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="10" required>％
                     </blockquote>
                     <!-- </form> -->
                 </div>
             </div>
 
-            <div class="flex_3">
+            <div class="flex_3" style="margin-top: -12em;">
                 <div class="item_4">
                     <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>個人風險屬性</p>
+                    <blockquote class="blockquote2">
+                        <p style="font-weight: bold;">個人風險屬性</p>
                         <p>穩健型</p>
                     </blockquote>
                     <!-- </form> -->
                 </div>
                 <div class="item_4">
-                    <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
-                        <p>扣款帳號</p>
-                        <select>
+                    <blockquote class="blockquote2">
+                        <p style="font-weight: bold;">扣款帳號</p>
+                        <select style="width: 120%;">
                             <option>000012345678【營業部永續活期儲蓄存款】－新台幣</option>
                         </select>
                     </blockquote>
-                    <!-- </form> -->
                 </div>
-                <div class="item_3">
+                <div class="item_4">
                 </div>
             </div>
+        </div>
 
-
-            <hr>
-
-            <p style="font-size: 13pt; color: #465765; margin-top: 1em; font-weight:bold;">請查看本次投資組合</p>
-
+        <div class="mwt_border" style="width:60em; height: 25em; margin-top: 1em;">
+            <span class="arrow_l_int"></span>
+            <span class="arrow_l_out"></span>
+            <p style="font-size: 13pt; color: #465765; font-weight:bold;">請查看本次投資組合</p>
             <div class="flex_3">
                 <div class="item_3">
-                    <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
+                    <blockquote class="blockquote3">
                         <p style="font-weight:bold;">投資方案</p>
                         <p>永續2號</p>
                     </blockquote>
-                    <!-- </form> -->
                 </div>
             </div>
-
-            <div class="flex_3">
-                <div class="item_3">
+            <div class="flex_3" style="margin-top: -18em;">
+                <div class="item_3" style="margin-bottom: 0em;">
                     <!-- <form style="font-size: 13pt;"> -->
-                    <blockquote>
+                    <blockquote class="blockquote3">
                         <p style="font-weight:bold;">標的配置比重</p>
                     </blockquote>
                     <!-- </form> -->
                 </div>
-                <div class="item_5">
-                    <!-- <form style="font-size: 13pt;"> -->
-                    <img src="地球智能投資圖片/10_2_投資下單.png" width="70%" height="85%"
-                        style="padding-left:-20px ; padding-top: 20px; margin-left: 1em;">
-                    <!-- </form> -->
-                </div>
-                <div class="flex_3">
-                    <div class="item_3">
-                    </div>
+                <div class="item_5" style="margin-bottom: 0em;">
+                    <img src="地球智能投資圖片/10_2_投資下單.png" width="60%" height="50%"
+                        style="padding-left:-20px ; padding-top: 12px; margin-left: 1em;">
                 </div>
             </div>
         </div>
 
         <br>
 
-        <!-- <div style="text-align:center;" onclick="location.href='invest_confirm_check.html'">
-            <input type="button" class="btn_type1" id="btn" value="下一步" onclick="setInputItem()">
-        </div>
-        <div style="text-align: center;">
-            <button class="btn_type2" onclick="location.href='invest_e1_1.html'">上一步</button>
-        </div> -->
-
         <input type="submit" class="btn_type1" id="btn" value="下一步" onclick="setInputItem()"
-            style="text-align: center; margin-left: 40em;">
-
-        <button class="btn_type2" onclick="location.href='Sinveste2_1.html'">上一步</button>
+            style="text-align: center; margin-left: 40em; position: relative; z-index: 100;">
+        <button class="btn_type2" style="position: relative; z-index: 100;"
+            onclick="location.href='Sinveste2_1.html'">上一步</button>
 
     </form>
 
@@ -179,10 +156,10 @@
 
     <script>
 
-        document.getElementById("inputName").value = localStorage.getItem("Name");
-        document.getElementById("inputMoney").value = localStorage.getItem("Money");
-        document.getElementById("inputTime").value = localStorage.getItem("Time");
-        document.getElementById("inputiMoney").value = localStorage.getItem("iMoney");
+        document.getElementById("targetName").value = localStorage.getItem("Name");
+        document.getElementById("targetMoney").value = localStorage.getItem("Money");
+        document.getElementById("targetTime").value = localStorage.getItem("Time");
+        document.getElementById("targetiMoney").value = localStorage.getItem("iMoney");
         var call = document.querySelector('.btnCall');
         var str = localStorage.getItem('Name');
         var str2 = localStorage.getItem('Money');
@@ -192,11 +169,11 @@
         var btn = document.querySelector('#btn');
 
         function setInputItem(e) {
-            var str = document.querySelector("#inputName").value; //選擇到表單輸入的值
-            var str2 = document.querySelector("#inputMoney").value;
-            var str3 = document.querySelector("#inputTime").value;
-            var str4 = document.querySelector("#inputiMoney").value;
-            var str5 = document.querySelector("#inputPercent").value;
+            var str = document.querySelector("#targetName").value; //選擇到表單輸入的值
+            var str2 = document.querySelector("#targetMoney").value;
+            var str3 = document.querySelector("#targetTime").value;
+            var str4 = document.querySelector("#targetiMoney").value;
+            var str5 = document.querySelector("#targetPercent").value;
 
             localStorage.setItem("Name", str); //存入 localStorage
             localStorage.setItem("Money", str2);
@@ -204,7 +181,6 @@
             localStorage.setItem("iMoney", str4);
             localStorage.setItem("Percent", str5);
         }
-        console.log(str5);
 
 
     </script>
@@ -236,6 +212,7 @@
                 }
             }
         }
+
 
 
     </script>

@@ -31,49 +31,164 @@
         <img src="地球智能投資圖片/流程（右上角）/流程透明度 中-2.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
     </div>
 
-    <img src="地球智能投資圖片/robot_judy.png" style="float: left; z-index: -100; margin-top: 2em;" width="5%">
 
-    <h1 style="text-align: center; color: #38566A; margin-bottom: 15px;">設定退休計畫</h1>
+    <h1 style="text-align: center; color: #38566A; margin-bottom: 15px; font-size: 32px;">設定投資目標</h1>
 
     <form action="Sinvest_solution.html">
-        <div style="margin-left:6em; margin-right:5em;margin-top:1.8em;background-color: white;border:3px #CCCCCC solid;
-    border-radius: 0.5em;color: black;font-size: 20px;height: 8em; ">
-            <img src="地球智能投資圖片/4_設定投資目標/4_1.png"
-                style="float: left; width: 20%;margin-left: 3em; margin-top: 1em; margin-right: 2em;">
-            <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請針對退休計畫，設定計畫名稱；請輸入於下方空格內</p>
-            <input type="text" id="targetName" class="inputbox" placeholder="  請輸入目標名稱" required="required">
+        <img src="地球智能投資圖片/Rachel.png" width="5%" class="headshot" style="margin-top: 0em;">
+        <div class="mwt_border" style="width:24em">
+            <span class="arrow_l_int"> </span>
+            <span class="arrow_l_out"> </span>
+            請針對退休計畫，設定計畫名稱；請輸入於右方空格內
         </div>
 
-        <div style="margin-left: 6em; margin-right: 5em; margin-top:1em;background-color: white;border:3px #CCCCCC solid;
-    border-radius: 0.5em;color: black;font-size: 20px;height: 15em; ">
-            <img src="地球智能投資圖片/4_設定投資目標/4_2.png"
-                style="float: left; width: 20%;margin-left: 3em; margin-top: 2em; margin-right: 2em;">
-            <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您需要多少錢才能達成您的計畫呢？請輸入於下方空格內</p>
-            <input type="text" id="targetMoney" class="inputbox" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
-                placeholder="  請輸入新台幣1,000～9,999,999元" required="required"> 元
-            <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您預計多久後退休呢？請輸入於下方空格內</p>
-            <input type="text" id="targetTime" class="inputbox" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
-                placeholder="  請輸入3~50年" required="required"> 年<br><br>
-            <img src="地球智能投資圖片/alert_1.png" width="25%">
+        <img src="地球智能投資圖片/me.png" width="5%" class="headshot_me">
+        <div class="mwt_border_r" style="width:24em;">
+            <span class="arrow_r_int"> </span>
+            <span class="arrow_r_out"> </span>
+            <input type="text" id="targetName" class="inputbox" style="width: 90%;" placeholder="  請輸入計畫名稱">
         </div>
 
-        <div style="margin-left: 6em; margin-right: 5em; margin-top: 1em; background-color: white; border: 3px #CCCCCC solid;
-    border-radius: 0.5em;color: black;font-size: 20px;height: 18em; ">
-            <img src="地球智能投資圖片/4_設定投資目標/4_3.png" style="float: left; width: 20%; margin: 1.5em; margin-right: 4em;">
-            <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您現在要投入多少資金在此項投資呢？請輸入於下方空格內</p>
-            <input type="text" id="investMoney" class="inputbox" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"
-                placeholder="  請輸入新台幣1,000～9,999,999元" required="required"> 元<br><br>
-            <img src="地球智能投資圖片/alert_2.png" width="40%">
-            <p style="margin-left: 18em; margin-top: 2em; font-size: 15px;">請問您較想使用單筆投資還是定期定額的方式進行投資呢？請點選下方選項</p>
-            <input value='單筆投資' type="radio" name="erarbeiten" required>單筆投資<br>
-            <input value='定期定額' type="radio" name="erarbeiten" required>定期定額<br><br>
-            <img src="地球智能投資圖片/alert_3.png" width="37%">
+        <input type="button" style="cursor: pointer;" class="check_button" onclick="sayHello()" value="確定">
 
-        </div>
+        <div id="block1">
+            <img src="地球智能投資圖片/Rachel.png" width="5%" class="headshot" style="margin-top: 0em;">
+            <div class="mwt_border" style="width:27em">
+                <span class="arrow_l_int"> </span>
+                <span class="arrow_l_out"> </span>
+                請問您需要多少錢才能達成您的計畫呢？請輸入於右方空格內
+            </div>
 
-        <input type="submit" class="btnClass btn_type1" value="下一步" style="margin-left: 45em;" onclick="saveData()">
+            <img src="地球智能投資圖片/me.png" width="5%" class="headshot_me">
+            <div class="mwt_border_r" style="width:24em;">
+                <span class="arrow_r_int"> </span>
+                <span class="arrow_r_out"> </span>
+                <input type="text" id="targetMoney" class="inputbox" style="width: 90%;"
+                    onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="  請輸入新台幣1,000～9,999,999元"> 元
+            </div>
+
+            <input type="button" style="cursor: pointer;" class="check_button" onclick="sayHello2()" value="確定">
+
+            <div id="block2">
+                <img src="地球智能投資圖片/Rachel.png" width="5%" class="headshot" style="margin-top: 0em;">
+                <div class="mwt_border" style="width:27em">
+                    <span class="arrow_l_int"> </span>
+                    <span class="arrow_l_out"> </span>
+                    請問您預計花多久後退休資呢？請輸入於右方空格內
+                </div>
+                <div class="mwt_border" style="width:31em; height: 3em; margin-top: 0;">
+                    <span class="arrow_l_int"> </span>
+                    <span class="arrow_l_out"> </span>
+                    <img src="地球智能投資圖片/exclamation.png">
+                    小提醒<br>在智能投資裡，有65%享受自由人生的族群，目標時程設定在3至5年
+                </div>
+
+                <img src="地球智能投資圖片/me.png" width="5%" class="headshot_me">
+                <div class="mwt_border_r" style="width:24em;">
+                    <span class="arrow_r_int"> </span>
+                    <span class="arrow_r_out"> </span>
+                    <input type="text" id="targetTime" class="inputbox" style="width: 90%;"
+                        onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="  請輸入3~50年"> 年
+                </div>
+
+                <input type="button" style="cursor: pointer;" class="check_button" onclick="sayHello3()" value="確定">
+
+                <div id="block3">
+                    <img src="地球智能投資圖片/Rachel.png" width="5%" class="headshot" style="margin-top: 0em;">
+                    <div class="mwt_border" style="width:28em">
+                        <span class="arrow_l_int"> </span>
+                        <span class="arrow_l_out"> </span>
+                        請問您現在要投入多少資金在此項投資呢？請輸入於右方空格內
+                    </div>
+                    <div class="mwt_border" style="width:44em; height: 4em; margin-top: 0;">
+                        <span class="arrow_l_int"> </span>
+                        <span class="arrow_l_out"> </span>
+                        <img src="地球智能投資圖片/exclamation.png">
+                        小提醒<br>
+                        投資一定金額能讓資產配置更有效率。在智能投資裡，有46%享受自由人生的族群，每月投入在新台幣五千至一萬元間
+                    </div>
+                    <img src="地球智能投資圖片/me.png" width="5%" class="headshot_me">
+                    <div class="mwt_border_r" style="width:24em;">
+                        <span class="arrow_r_int"> </span>
+                        <span class="arrow_r_out"> </span>
+                        <input type="text" id="targetiMoney" class="inputbox" style="width: 90%;"
+                            onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="  請輸入新台幣1,000～9,999,999元">
+                        元
+                    </div>
+
+                    <input type="button" style="cursor: pointer;" class="check_button" onclick="sayHello4()" value="確定">
+
+                    <div id="block4">
+                        <img src="地球智能投資圖片/Rachel.png" width="5%" class="headshot" style="margin-top: 0em;">
+                        <div class="mwt_border" style="width:33em">
+                            <span class="arrow_l_int"> </span>
+                            <span class="arrow_l_out"> </span>
+                            請問您較想使用單筆投資還是定期定額的方式進行投資呢？請點選下方選項
+                        </div>
+                        <div class="mwt_border" style="width:40em; height: 5em; margin-top: 0;">
+                            <span class="arrow_l_int"> </span>
+                            <span class="arrow_l_out"> </span>
+                            <img src="地球智能投資圖片/exclamation.png">
+                            小提醒<br>
+                            單筆投資：一筆錢一次進行投資，相對低點進場會有較大獲利空間，但收益及風險相對較大<br>
+                            定期定額：每個月定時投入固定的金額，只要長期趨勢向上就有機會獲利，較不受市場波動影響，風險較低
+                        </div>
+                        <div style="margin-left: 17em;">
+                            <input value='單筆投資' type="radio" name="erarbeiten" onclick="sayHello5()" required>單筆投資<br>
+                            <input value='定期定額' type="radio" name="erarbeiten" onclick="sayHello5()"
+                                required>定期定額<br><br>
+                        </div>
+
+                        <div id="block5">
+                            <img src="地球智能投資圖片/me.png" width="5%" class="headshot_me">
+                            <div class="mwt_border_r" style="width:24em;">
+                                <span class="arrow_r_int"> </span>
+                                <span class="arrow_r_out"> </span>
+                                <span class="showChoose"></span>
+                            </div>
+
+                            <input type="submit" class="btnClass btn_type1" value="下一步" style="margin-left: 45em;"
+                                onclick="saveData()">
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                // $(document).ready(function () {
+                //     $("button").click(function () {
+                //         $("#block1").toggle();
+                //     });
+                // });
+                function sayHello() {
+                    $("#block1").show();
+                }
+
+                function sayHello2() {
+                    $("#block2").show();
+                }
+
+                function sayHello3() {
+                    $("#block3").show();
+                }
+
+                function sayHello4() {
+                    $("#block4").show();
+                }
+
+                function sayHello5() {
+                    $("#block5").show();
+                }
+            </script>
 
     </form>
+
 
     <script>
         var btn = document.querySelector('.btnClass');
@@ -83,7 +198,7 @@
             var str = document.querySelector('#targetName').value;
             var str2 = document.querySelector('#targetMoney').value;
             var str3 = document.querySelector('#targetTime').value;
-            var str4 = document.querySelector('#investMoney').value;
+            var str4 = document.querySelector('#targetiMoney').value;
 
             localStorage.setItem('Name', str); //把輸入的內容存在瀏覽器 
             localStorage.setItem('Money', str2);
@@ -91,12 +206,16 @@
             localStorage.setItem('iMoney', str4);
         }
 
-        //btn.addEventListener('click', saveData)
+        // btn.addEventListener('click', saveData)
+
+        function showChoose() {
+            let nameDom = document.querySelector('.showChoose')
+            nameDom.innerHTML = localStorage.getItem('g1')
+        }
+        showChoose();
     </script>
 
     <script>
-        //call reload on page load
-        reload();
 
         //add click functionality to radio buttons
         Array.from(document.querySelectorAll('input[type="radio"]')).forEach(function (item, index) {
@@ -105,25 +224,15 @@
 
         //Save Values
         function save() {
+
             //Radiobuttons  
             var g1 = document.querySelector('input[name=erarbeiten]:checked').value;
             localStorage.setItem("g1", g1);
         }
-        //Restoring saved Values
-        function reload() {
-            // Radiobuttons    
-            // get a list of DOM elements
-            var G1 = Array.from(document.getElementsByName('erarbeiten'));
-            var val1 = localStorage.getItem('g1');
-            for (var i = 0; i < G1.length; i++) {
-                if (G1[i].value == val1) {
-                    G1[i].checked = true;
-                }
-            }
-        }
-
 
     </script>
+
+    <br><br>
 
 </body>
 
