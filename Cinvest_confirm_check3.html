@@ -37,7 +37,7 @@
     <div class="mwt_border" style="width:50em; height: 8em; margin-top: 1em;">
         <span class="arrow_l_int"></span>
         <span class="arrow_l_out"></span>
-        <p style="font-size: 13pt; color: #465765; font-weight:bold; margin-top: 0em; margin-top: 0em;">請輸入本次目標計畫於以下內容
+        <p style="font-size: 13pt; color: #465765; font-weight:bold; margin-top: 0em; margin-top: 0em;">請你再次確認你這次的目標計畫
         </p>
         <div class="flex_3">
             <div class="item_3">
@@ -65,7 +65,7 @@
     <div class="mwt_border" style="width:50em; height: 15em; margin-top: 1em;">
         <span class="arrow_l_int"></span>
         <span class="arrow_l_out"></span>
-        <p style="font-size: 13pt; color: #465765; margin-top: 0em; font-weight:bold;">請輸入本次申購資訊於以下內容</p>
+        <p style="font-size: 13pt; color: #465765; margin-top: 0em; font-weight:bold;">也麻煩你核對你這次的申購資訊</p>
         <div class="flex_3">
             <div class="item_3">
                 <!-- <form style="font-size: 13pt;"> -->
@@ -116,7 +116,7 @@
     <div class="mwt_border" style="width:50em; height: 25em; margin-top: 1em;">
         <span class="arrow_l_int"></span>
         <span class="arrow_l_out"></span>
-        <p style="font-size: 13pt; color: #465765; margin-top: 0em; font-weight:bold;">請查看本次投資組合</p>
+        <p style="font-size: 13pt; color: #465765; margin-top: 0em; font-weight:bold;">最後，請你確認這次的投資組合有沒有問題</p>
         <div class="flex_3">
             <div class="item_3">
                 <blockquote class="blockquote3">
@@ -271,19 +271,25 @@
     <script type="text/javascript">
         function confirm() {
             Swal.fire({
-                title: "申購前提醒",
-                text: "是否繼續申購?",
+                title: '申購前提醒',
+                html:
+                    '<p align="left">地球智能投資係為「指定營運範圍或方法單獨管理運用金錢信託投資國外有價證券信託」</p>' +
+                    '<p align="left">1.以信託方式由本行單獨設帳管理你所交付之資產，並於約定之範團内由本行為您提供投資建議。</p>' +
+                    '<p align="left">2.信託財產之管理用並非絕無險，本行不擔保信託財產投資之盈虧，亦不保證最低收益。</p>' +
+                    '<p align="left">3.地球智能投資屬於累積型產品，投資計畫若有配息將進到該計畫的現金部位，投資團隊會根據現金部位比例，再為您進行投資配置。</p>' +
+                    '<p align="left">是否繼續申購？</p>',
                 confirmButtonText: "繼續",
                 confirmButtonColor: "#C5B9AC",
                 cancelButtonText: "上一步",
                 cancelButtonColor: "#C5B9AC",
+                width: 650,
                 showCancelButton: true
             }).then(function (result) {
                 if (result.value) {
-                    window.location = "Cinvest_confirm_finish3.html";
+                    window.location = "Sinvest_confirm_finish.html";
                 }
                 else {
-                    window.location = "Cinvest_confirm3.html";
+                    window.location = "Sinvest_confirm.html";
                 }
             });
         }
