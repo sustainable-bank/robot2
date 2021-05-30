@@ -16,18 +16,19 @@
         <a href="#">信用卡</a>
         <a href="#">外幣/換匯</a>
         <a href="#">臺幣/轉帳</a>
-        <div onclick="location.href='index.html'" style="cursor: pointer;">
+        <div onclick="location.href='real_index.html'" style="cursor: pointer;">
             <h3>永續銀行</h3>
         </div>
     </div>
 
-    <div class="wrapper">
-        <div>
-            <h2 style="margin-left: 6em;margin-top: -1em;">永續智能投資</h2>
+    <div class="flexbar">
+        <div class="itembar">
+            <h2>永續智能投資</h2>
         </div>
-        <div></div>
-        <div></div>
-        <img src="永續智能投資圖片/流程（右上角）/流程透明度 中-4.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
+        <div class="itembar flex-2bar" style="position:absolute; right:-2em; margin-top: 1.5em;">
+            <img src="永續智能投資圖片/流程（右上角）/流程透明度 中-4.png"
+                style="display: block; max-width:500px; max-height:50px; width: auto; height: auto;">
+        </div>
     </div>
 
     <h1 style="text-align: center; color: #38566A; margin-bottom: 15px; font-size: 15pt;">確認投資內容</h1>
@@ -273,12 +274,11 @@
             Swal.fire({
                 title: '申購前提醒',
                 html:
-                    '<p align="left">永續智能投資係為「指定營運範圍或方法單獨管理運用金錢信託投資國外有價證券信託」</p>' +
-                    '<p align="left">1.以信託方式由本行單獨設帳管理您所交付之資產，並於約定之範團内由本行為您提供投資建議。</p>' +
-                    '<p align="left">2.信託財產之管理用並非絕無險，本行不擔保信託財產投資之盈虧，亦不保證最低收益。</p>' +
-                    '<p align="left">3.永續智能投資屬於累積型產品，投資計畫若有配息將進到該計畫的現金部位，投資團隊會根據現金部位比例，再為您進行投資配置。</p>' +
-                    '<p align="left">是否繼續申購？</p>',
-                confirmButtonText: "繼續",
+                    '<p align="left">永續智能投資係為「指定營運範圍或方法之單獨管理運用金錢信託」</p>' +
+                    '<p align="left">1.以信託方式由本行單獨設帳管理你所交付之資產，並於約定之範團内由本行為您提供投資建議。</p>' +
+                    '<p align="left">2.信託財產之管理運用並非絕無險，本行不負責信託財產投資之盈虧，亦不保證最低收益。</p>' +
+                    '<p align="left">是否確認進行申購？</p>',
+                confirmButtonText: "確認",
                 confirmButtonColor: "#C5B9AC",
                 cancelButtonText: "上一步",
                 cancelButtonColor: "#C5B9AC",
@@ -286,10 +286,10 @@
                 showCancelButton: true
             }).then(function (result) {
                 if (result.value) {
-                    window.location = "Sinvest_confirm_finish.html";
+                    window.location = "Cinvest_confirm_finish3.html";
                 }
                 else {
-                    window.location = "Sinvest_confirm.html";
+                    window.location = "Cinvest_confirm3.html";
                 }
             });
         }

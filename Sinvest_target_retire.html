@@ -16,19 +16,20 @@
         <a href="#">信用卡</a>
         <a href="#">外幣/換匯</a>
         <a href="#">臺幣/轉帳</a>
-        <div onclick="location.href='index.html'" style="cursor: pointer;">
+        <div onclick="location.href='real_index.html'" style="cursor: pointer;">
             <h3>永續銀行</h3>
         </div>
     </div>
 
 
-    <div class="wrapper">
-        <div>
-            <h2 style="margin-left: 6em;margin-top: -1em;">永續智能投資</h2>
+    <div class="flexbar">
+        <div class="itembar">
+            <h2>永續智能投資</h2>
         </div>
-        <div></div>
-        <div></div>
-        <img src="永續智能投資圖片/流程（右上角）/流程透明度 中-2.png" width="150%" style="margin-right: 10em;margin-top: -1.5em;">
+        <div class="itembar flex-2bar" style="position:absolute; right:-2em; margin-top: 1.5em;">
+            <img src="永續智能投資圖片/流程（右上角）/流程透明度 中-2.png"
+                style="display: block; max-width:500px; max-height:50px; width: auto; height: auto;">
+        </div>
     </div>
 
 
@@ -47,7 +48,7 @@
             <span class="arrow_r_int"> </span>
             <span class="arrow_r_out"> </span>
             <input type="text" id="targetName" class="inputbox" style="top: 50%; transform: translate(0%, -50%);"
-                placeholder="  請輸入計畫名稱" required>
+                placeholder="  請輸入計畫名稱" required autocomplete="off">
         </div>
 
         <input type="button" style="cursor: pointer;" class="check_button" onclick="sayHello()" value="確定">
@@ -67,7 +68,7 @@
                 <input type="text" id="targetMoney" class="inputbox"
                     style="top: 50%; transform: translate(0%, -50%); float: left;"
                     onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="  請輸入新台幣1,000～9,999,999元"
-                    required>
+                    required autocomplete="off">
                 <p style="margin-top: -0.55em; float: right; margin-right: -0.8em;">元</p>
             </div>
 
@@ -80,13 +81,13 @@
                     <span class="arrow_l_out"> </span>
                     <p style="top: 50%; transform: translate(0%, -50%); margin: auto;">您預計幾年後會退休呢？</p>
                 </div>
-                <div class="mwt_border" style="width:33em; height: 1em;">
+                <div class="mwt_border" style="width:37em; height: 1em;">
                     <span class="arrow_l_int"> </span>
                     <span class="arrow_l_out"> </span>
                     <img style="top: 50%; transform: translate(0%, -50%); margin: auto;" src="永續智能投資圖片/exclamation.png">
                     <p style="margin-top: -1.9em;">
                         &emsp; &ensp;小提醒<br>
-                        &emsp; &ensp;在智能投資裡，有65%享受自由人生的族群，目標時程設定在3至5年</p>
+                        &emsp; &ensp;統計結果發現，約有65%使用智能投資平台的投資者，目標時程設定在3至5年</p>
                 </div>
 
                 <img src="永續智能投資圖片/me.png" width="5%" class="headshot_me">
@@ -95,7 +96,7 @@
                     <span class="arrow_r_out"> </span>
                     <input type="text" id="targetTime" class="inputbox"
                         style="top: 50%; transform: translate(0%, -50%); float: left;"
-                        onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="  請輸入3~50年" required>
+                        onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="  請輸入3~50年" required autocomplete="off">
                     <p style="margin-top: -0.55em; float: right; margin-right: -0.8em;">年</p>
                 </div>
 
@@ -116,8 +117,8 @@
                             src="永續智能投資圖片/exclamation.png">
                         <p style="margin-top: -1.9em;">
                             &emsp; &ensp;小提醒<br>
-                            &emsp; &ensp;投資一定金額能讓資產配置更有效率。在智能投資裡，有46%享受自由人生的族<br>
-                            &emsp; &ensp;群，每月投入在新台幣五千至一萬元間</p>
+                            &emsp; &ensp;統計結果發現，約有46%智能投資平台的投資者，每月投入在新台幣五千至一萬<br>
+                            &emsp; &ensp;元間為大宗</p>
                     </div>
 
                     <img src="永續智能投資圖片/me.png" width="5%" class="headshot_me">
@@ -127,7 +128,7 @@
                         <input type="text" id="targetiMoney" class="inputbox"
                             style="top: 50%; transform: translate(0%, -50%); float: left;"
                             onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="  請輸入新台幣1,000～9,999,999元"
-                            required>
+                            required autocomplete="off">
                         <p style="margin-top: -0.55em; float: right; margin-right: -0.8em;">元</p>
                     </div>
 
